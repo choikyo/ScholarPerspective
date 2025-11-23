@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Search Publications - Scholar Perspective{% endblock %}
+
+{% block content %}
+<section class="search-section">
+    <h2>Search Publications</h2>
+    <form id="searchForm">
+        <input type="text" id="searchQuery" placeholder="Search by title, author, or keywords...">
+        <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="philosophy">Philosophy</option>
+            <option value="history">History</option>
+            <option value="literature">Literature</option>
+            <option value="art-history">Art History</option>
+            <option value="cultural-studies">Cultural Studies</option>
+            <option value="linguistics">Linguistics</option>
+            <option value="religious-studies">Religious Studies</option>
+            <option value="classics">Classics</option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+
+    <div id="searchResults" class="articles-grid">
+        <!-- Search results will appear here -->
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }} - Scholar Perspective{% endblock %}
+
+{% block content %}
+<article class="article-viewer">
+    <div class="article-viewer-header">
+        <a href="{{ url_for('publications') }}" class="back-link">&larr; Back to Publications</a>
+        <span class="issue-label">{{ issue }}</span>
+    </div>
+
+    <h1>{{ title }}</h1>
+
+    <div class="pdf-container">
+        <div class="pdf-overlay"></div>
+        <iframe
+            src="{{ url_for('serve_pdf', filepath=filepath) }}#toolbar=0&navpanes=0"
+            class="pdf-frame"
+            title="{{ title }}">
+        </iframe>
+    </div>
+</article>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Disable right-click context menu
+document.addEventListener('contextmenu', function(e) {
+    if (e.target.closest('.pdf-container')) {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Disable keyboard shortcuts for copy
+document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'a' || e.key === 'x' || e.key === 's' || e.key === 'p')) {
+        e.preventDefault();
+        return false;
+    }
+});
+
+// Disable drag
+document.addEventListener('dragstart', function(e) {
+    e.preventDefault();
+    return false;
+});
+</script>
+{% endblock %}

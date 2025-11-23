@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Publications - Scholar Perspective{% endblock %}
+
+{% block content %}
+<section class="publications-section">
+    <h2>Publications</h2>
+    <p class="publications-intro">Browse our journal issues and articles.</p>
+
+    {% if issues %}
+    <div class="issues-list">
+        {% for issue in issues %}
+        <div class="issue-item">
+            <div class="issue-header" onclick="toggleIssue(this)">
+                <span class="issue-icon">+</span>
+                <h3>{{ issue.name }}</h3>
+                <span class="article-count">{{ issue.articles|length }} article{% if issue.articles|length != 1 %}s{% endif %}</span>
+            </div>
+            <div class="issue-articles">
+                {% if issue.articles %}
+                <ul>
+                    {% for article in issue.articles %}
+                    <li>
+                        <a href="{{ url_for('view_article', filepath=issue.name + '/' + article) }}">
+                            <span class="article-icon">📄</span>
+                            {{ article }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="no-articles">No articles in this issue yet.</p>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="no-issues">No publications available yet.</p>
+    {% endif %}
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function toggleIssue(header) {
+    const issueItem = header.parentElement;
+    const icon = header.querySelector('.issue-icon');
+
+    issueItem.classList.toggle('expanded');
+    icon.textContent = issueItem.classList.contains('expanded') ? '−' : '+';
+}
+</script>
+{% endblock %}

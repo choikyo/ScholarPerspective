@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Submit Article - Scholar Perspective{% endblock %}
+
+{% block content %}
+<section class="upload-form">
+    <h2>Submit Academic Article</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title">Article Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter the full title of your article" required>
+        </div>
+
+        <div class="form-group">
+            <label for="authors">Authors</label>
+            <input type="text" id="authors" name="authors" placeholder="Jane Smith, John Doe" required>
+        </div>
+
+        <div class="form-group">
+            <label for="abstract">Abstract</label>
+            <textarea id="abstract" name="abstract" placeholder="Provide a concise summary of your research (250-300 words recommended)" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="keywords">Keywords</label>
+            <input type="text" id="keywords" name="keywords" placeholder="phenomenology, ethics, modernity">
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="philosophy">Philosophy</option>
+                <option value="history">History</option>
+                <option value="literature">Literature</option>
+                <option value="art-history">Art History</option>
+                <option value="cultural-studies">Cultural Studies</option>
+                <option value="linguistics">Linguistics</option>
+                <option value="religious-studies">Religious Studies</option>
+                <option value="classics">Classics</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="pdf">Upload PDF</label>
+            <input type="file" id="pdf" name="pdf" accept=".pdf" required>
+        </div>
+
+        <button type="submit">Submit Article</button>
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }} - Scholar Perspective{% endblock %}
+
+{% block content %}
+<article class="article-detail">
+    <h1>{{ article.title }}</h1>
+
+    <div class="article-meta">
+        <p><strong>Authors:</strong> {{ article.authors|join(', ') }}</p>
+        <p><strong>Category:</strong> {{ article.category.replace('-', ' ').title() }}</p>
+        <p><strong>Published:</strong> {{ article.upload_date.strftime('%B %d, %Y') }}</p>
+        {% if article.keywords %}
+        <p><strong>Keywords:</strong> {{ article.keywords|join(', ') }}</p>
+        {% endif %}
+    </div>
+
+    <div class="article-abstract">
+        <h3>Abstract</h3>
+        <p>{{ article.abstract }}</p>
+    </div>
+
+    <div class="article-actions">
+        <a href="{{ url_for('static', filename=article.pdf_path) }}" target="_blank" class="btn-download">
+            Download PDF
+        </a>
+    </div>
+</article>
+{% endblock %}
