@@ -106,6 +106,10 @@ def api_search():
 def search_page():
     return render_template('search.html')
 
+@app.route('/board')
+def board():
+    return render_template('board.html')
+
 @app.route('/publications')
 def publications():
     """List all issues and their articles from the articles folder."""
