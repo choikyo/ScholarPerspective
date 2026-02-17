@@ -10,6 +10,9 @@
     </div>
 
     <h1>{{ title }}</h1>
+    {% if authors %}
+    <p class="article-viewer-authors">{{ authors }}</p>
+    {% endif %}
 
     <div class="pdf-container">
         <div class="pdf-overlay"></div>

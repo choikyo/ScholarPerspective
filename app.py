@@ -113,9 +113,24 @@ def board():
 @app.route('/publications')
 def publications():
     """List all issues and their articles from the articles folder."""
-    articles_dir = os.path.join(app.root_path, 'articles')
-    issues = []
+    import csv
 
+    articles_dir = os.path.join(app.root_path, 'articles')
+    csv_path = os.path.join(articles_dir, 'articles.csv')
+
+    # Load article metadata from CSV
+    article_metadata = {}
+    if os.path.exists(csv_path):
+        with open(csv_path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                key = f"{row['issue']}/{row['filename']}"
+                article_metadata[key] = {
+                    'title': row.get('title', ''),
+                    'authors': row.get('authors', '')
+                }
+
+    issues = []
     if os.path.exists(articles_dir):
         # Get all issue folders, sorted
         issue_folders = sorted([f for f in os.listdir(articles_dir)
@@ -126,9 +141,20 @@ def publications():
             # Get all article files in this issue
             article_files = sorted([f for f in os.listdir(issue_path)
                                    if os.path.isfile(os.path.join(issue_path, f)) and not f.startswith('.')])
+
+            articles = []
+            for filename in article_files:
+                key = f"{issue_name}/{filename}"
+                metadata = article_metadata.get(key, {})
+                articles.append({
+                    'filename': filename,
+                    'title': metadata.get('title', os.path.splitext(filename)[0]),
+                    'authors': metadata.get('authors', '')
+                })
+
             issues.append({
                 'name': issue_name,
-                'articles': article_files
+                'articles': articles
             })
 
     return render_template('publications.html', issues=issues)
@@ -136,6 +162,8 @@ def publications():
 @app.route('/publications/view/<path:filepath>')
 def view_article(filepath):
     """View article PDF in browser without allowing copy/paste."""
+    import csv
+
     articles_dir = os.path.join(app.root_path, 'articles')
     file_path = os.path.join(articles_dir, filepath)
 
@@ -147,11 +175,23 @@ def view_article(filepath):
     filename = os.path.basename(filepath)
     issue_name = os.path.dirname(filepath)
 
-    # Get article title (filename without extension)
+    # Load metadata from CSV
+    csv_path = os.path.join(articles_dir, 'articles.csv')
     article_title = os.path.splitext(filename)[0]
+    article_authors = ''
+
+    if os.path.exists(csv_path):
+        with open(csv_path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                if row['issue'] == issue_name and row['filename'] == filename:
+                    article_title = row.get('title', article_title)
+                    article_authors = row.get('authors', '')
+                    break
 
     return render_template('article_viewer.html',
                          title=article_title,
+                         authors=article_authors,
                          issue=issue_name,
                          filepath=filepath)
 

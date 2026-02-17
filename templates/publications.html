@@ -21,9 +21,13 @@
                 <ul>
                     {% for article in issue.articles %}
                     <li>
-                        <a href="{{ url_for('view_article', filepath=issue.name + '/' + article) }}">
-                            <span class="article-icon">📄</span>
-                            {{ article }}
+                        <a href="{{ url_for('view_article', filepath=issue.name + '/' + article.filename) }}">
+                            <div class="article-info">
+                                <span class="article-title">{{ article.title }}</span>
+                                {% if article.authors %}
+                                <span class="article-authors">{{ article.authors }}</span>
+                                {% endif %}
+                            </div>
                         </a>
                     </li>
                     {% endfor %}
