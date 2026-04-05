@@ -916,6 +916,10 @@ footer {
     color: var(--color-text-primary);
     font-weight: 500;
     font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 600px;
 }
 
 .issue-articles li a:hover .article-title {

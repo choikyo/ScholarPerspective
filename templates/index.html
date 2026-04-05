@@ -29,12 +29,57 @@
             </div>
 
             <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject of your inquiry" required>
+            </div>
+
+            <div class="form-group">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="4" placeholder="Briefly describe your research interest or inquiry..." required></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">Send Message</button>
+            <div id="formFeedback" style="display:none; margin-bottom: 1rem; padding: 0.75rem; border-radius: 4px;"></div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
         </form>
+
+        <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var btn = document.getElementById('submitBtn');
+            var feedback = document.getElementById('formFeedback');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            feedback.style.display = 'none';
+
+            var formData = new FormData(this);
+            fetch('/contact', { method: 'POST', body: formData })
+                .then(function(res) { return res.json(); })
+                .then(function(data) {
+                    if (data.success) {
+                        feedback.style.background = '#d4edda';
+                        feedback.style.color = '#155724';
+                        feedback.textContent = 'Your message has been sent. Thank you!';
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        feedback.style.background = '#f8d7da';
+                        feedback.style.color = '#721c24';
+                        feedback.textContent = data.error || 'Something went wrong. Please try again.';
+                    }
+                    feedback.style.display = 'block';
+                })
+                .catch(function() {
+                    feedback.style.background = '#f8d7da';
+                    feedback.style.color = '#721c24';
+                    feedback.textContent = 'Network error. Please try again.';
+                    feedback.style.display = 'block';
+                })
+                .finally(function() {
+                    btn.disabled = false;
+                    btn.textContent = 'Send Message';
+                });
+        });
+        </script>
     </div>
 </section>
 {% endblock %}

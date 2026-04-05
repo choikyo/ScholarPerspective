@@ -4,6 +4,9 @@ from models import db, Article
 from config import Config
 import os
 import json
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from datetime import datetime
 
 def create_app():
@@ -105,6 +108,41 @@ def api_search():
 @app.route('/search')
 def search_page():
     return render_template('search.html')
+
+@app.route('/contact', methods=['POST'])
+def contact():
+    sender_email = request.form.get('email', '').strip()
+    subject = request.form.get('subject', '').strip()
+    message = request.form.get('message', '').strip()
+
+    if not sender_email or not subject or not message:
+        return jsonify({'success': False, 'error': 'All fields are required.'}), 400
+
+    mail_user = app.config.get('MAIL_USERNAME')
+    mail_pass = app.config.get('MAIL_PASSWORD')
+
+    if not mail_user or not mail_pass:
+        return jsonify({'success': False, 'error': 'Email service is not configured.'}), 500
+
+    try:
+        msg = MIMEMultipart()
+        msg['From'] = mail_user
+        msg['To'] = 'zhijing78@gmail.com'
+        msg['Subject'] = f'[Scholar Perspective] {subject}'
+        msg['Reply-To'] = sender_email
+
+        body = f"From: {sender_email}\n\n{message}"
+        msg.attach(MIMEText(body, 'plain'))
+
+        with smtplib.SMTP('smtp.gmail.com', 587) as server:
+            server.starttls()
+            server.login(mail_user, mail_pass)
+            server.send_message(msg)
+
+        return jsonify({'success': True})
+    except Exception:
+        return jsonify({'success': False, 'error': 'Failed to send message. Please try again later.'}), 500
+
 
 @app.route('/board')
 def board():
