@@ -40,7 +40,8 @@ async function renderPDF() {
         canvas.height = scaledViewport.height;
         canvas.style.width = '100%';
         canvas.style.display = 'block';
-        canvas.style.marginBottom = '8px';
+        canvas.style.marginBottom = '12px';
+        canvas.style.borderBottom = '3px solid #e1e4ed';
         container.appendChild(canvas);
 
         await page.render({
