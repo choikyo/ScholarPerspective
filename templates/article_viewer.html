@@ -9,44 +9,64 @@
         <span class="issue-label">{{ issue }}</span>
     </div>
 
-    <h1>{{ title }}</h1>
-    {% if authors %}
-    <p class="article-viewer-authors">{{ authors }}</p>
-    {% endif %}
-
-    <div class="pdf-container">
-        <div class="pdf-overlay"></div>
-        <iframe
-            src="{{ url_for('serve_pdf', filepath=filepath) }}#toolbar=0&navpanes=0"
-            class="pdf-frame"
-            title="{{ title }}">
-        </iframe>
-    </div>
+    <div id="pdfLoading" class="pdf-loading">Loading article...</div>
+    <div class="pdf-container" id="pdfContainer"></div>
 </article>
 {% endblock %}
 
 {% block scripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
-// Disable right-click context menu
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+const pdfUrl = "{{ url_for('serve_pdf', filepath=filepath) }}";
+const container = document.getElementById('pdfContainer');
+const loading = document.getElementById('pdfLoading');
+
+async function renderPDF() {
+    const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+    loading.style.display = 'none';
+    const containerWidth = container.clientWidth;
+
+    for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+        const page = await pdf.getPage(pageNum);
+        const viewport = page.getViewport({ scale: 1 });
+        const scale = containerWidth / viewport.width;
+        const scaledViewport = page.getViewport({ scale: scale });
+
+        const canvas = document.createElement('canvas');
+        canvas.width = scaledViewport.width;
+        canvas.height = scaledViewport.height;
+        canvas.style.width = '100%';
+        canvas.style.display = 'block';
+        canvas.style.marginBottom = '8px';
+        container.appendChild(canvas);
+
+        await page.render({
+            canvasContext: canvas.getContext('2d'),
+            viewport: scaledViewport
+        }).promise;
+    }
+}
+
+renderPDF();
+
+// Disable right-click
 document.addEventListener('contextmenu', function(e) {
     if (e.target.closest('.pdf-container')) {
         e.preventDefault();
-        return false;
     }
 });
 
-// Disable keyboard shortcuts for copy
+// Disable copy/print shortcuts
 document.addEventListener('keydown', function(e) {
-    if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'a' || e.key === 'x' || e.key === 's' || e.key === 'p')) {
+    if ((e.ctrlKey || e.metaKey) && ['c','a','x','s','p'].includes(e.key)) {
         e.preventDefault();
-        return false;
     }
 });
 
-// Disable drag
 document.addEventListener('dragstart', function(e) {
     e.preventDefault();
-    return false;
 });
 </script>
 {% endblock %}
