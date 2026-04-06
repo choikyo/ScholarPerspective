@@ -772,6 +772,31 @@ footer {
     box-sizing: border-box;
 }
 
+.back-btn-fixed {
+    position: fixed;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 100;
+    opacity: 0.85;
+}
+
+.back-btn-fixed:hover {
+    opacity: 1;
+    background: var(--color-primary-hover);
+}
+
 .pdf-loading {
     text-align: center;
     padding: 2rem;
@@ -902,10 +927,6 @@ footer {
     color: var(--color-text-primary);
     font-weight: 500;
     font-size: 1rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 600px;
 }
 
 .issue-articles li a:hover .article-title {
