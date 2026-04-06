@@ -10,8 +10,8 @@ Scholar Perspective is an academic journal website for liberal arts and humaniti
 
 - **Local development:** Working
 - **GitHub:** https://github.com/choikyo/ScholarPerspective
-- **Hosting:** PythonAnywhere (free tier for testing, plan to upgrade to $10/mo)
-- **Domain:** www.scholarperspective.com (owned, currently on GoDaddy, to be migrated)
+- **Hosting:** PythonAnywhere ($10/mo Web Developer plan)
+- **Domain:** www.scholarperspective.com (live — DNS via domain.com, CNAME → PythonAnywhere)
 
 ## Key Design Decisions
 
@@ -28,14 +28,15 @@ Scholar Perspective is an academic journal website for liberal arts and humaniti
 - Authors with commas need double quotes: `"Author One, Author Two"`
 
 ### PDF Viewer
-- Copy protection enabled (CSS user-select, JS keyboard blocking)
-- Uses iframe with `#toolbar=0` to hide PDF toolbar
+- Uses **PDF.js** (CDN) to render PDFs as canvas elements — no iframe
+- All pages rendered, fits screen width, sharp on Retina/HiDPI displays (devicePixelRatio aware)
+- Copy protection: right-click disabled, keyboard shortcuts blocked (Ctrl/Cmd+C/A/X/S/P)
+- Fixed back button (←) floats on left side of screen while reading
 - Route: `/publications/view/<filepath>`
 
 ### Future Considerations (discussed but not implemented)
 - Database for articles (3-5 years out)
 - Nightly batch DOCX → PDF conversion
-- Contact form functionality (currently non-functional placeholder)
 
 ## File Locations
 
@@ -49,7 +50,7 @@ Scholar Perspective is an academic journal website for liberal arts and humaniti
 
 ## Navigation Structure
 
-- Home (`/`) - Hero section + contact form placeholder
+- Home (`/`) - Hero section + contact form (functional, sends email via Gmail SMTP)
 - View Publications (`/publications`) - Issue list with articles
 - Board of Members (`/board`) - Editorial board page
 
