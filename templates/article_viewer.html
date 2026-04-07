@@ -5,11 +5,10 @@
 {% block content %}
 <article class="article-viewer">
     <div class="article-viewer-header">
-        <a href="{{ url_for('publications') }}" class="back-link">&larr; Back to Publications</a>
         <span class="issue-label">{{ issue }}</span>
     </div>
 
-    <a href="{{ url_for('publications') }}" class="back-btn-fixed">&larr;</a>
+    <a href="{{ url_for('publications') }}" class="back-btn-fixed">&larr; Back to Publications</a>
 
     <div id="pdfLoading" class="pdf-loading">Loading article...</div>
     <div class="pdf-container" id="pdfContainer"></div>
