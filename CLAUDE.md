@@ -44,7 +44,7 @@ Scholar Perspective is an academic journal website for liberal arts and humaniti
 |---------|----------|
 | Article PDFs | `articles/[Issue Name]/*.pdf` |
 | Article metadata | `articles/articles.csv` |
-| Book cover image | `static/images/book_cover.jpg` |
+| Book cover image | `static/images/cover.png` |
 | Logo (white) | `static/images/logo.png` |
 | Main styles | `static/css/style.css` |
 
