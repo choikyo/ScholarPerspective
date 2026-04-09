@@ -52,7 +52,7 @@ Scholar Perspective is an academic journal website for liberal arts and humaniti
 
 - Home (`/`) - Hero section + contact form (functional, sends email via Gmail SMTP)
 - View Publications (`/publications`) - Issue list with articles
-- Board of Members (`/board`) - Editorial board page
+- Advisory Board (`/board`) - 4 confirmed members: Dr. Bill Booth, Dr. Sundaram Rameshkumar, Dr. Steve Scheck, Professor Ming Wang (sorted alphabetically by last name)
 
 ## Commands
 
