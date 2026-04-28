@@ -52,7 +52,7 @@ Scholar Perspective is an academic journal website for liberal arts and humaniti
 
 - Home (`/`) - Hero section + contact form (functional, sends email via Gmail SMTP)
 - View Publications (`/publications`) - Issue list with articles
-- Advisory Board (`/board`) - 11 confirmed members: Dr. Doris Dornelles de Almeida, Dr. Bill Booth, Dr. Arul Dayanand, Dr. Kee Chye Ho, Dr. Megala Rajendran, Dr. Sundaram Rameshkumar, Dr. Stephen Scheck, Dr. Tong Sheng, Min Wang, Dr. Zhiwei Xiao, Dr. Cheunhoe Yow (sorted alphabetically by last name)
+- Advisory Board (`/board`) - 12 confirmed members: Dr. Doris Dornelles de Almeida, Dr. Bill Booth, Dr. Arul Dayanand, Dr. Kee Chye Ho, Professor Roberto Iuliano, Dr. Megala Rajendran, Dr. Sundaram Rameshkumar, Dr. Stephen Scheck, Dr. Tong Sheng, Min Wang, Dr. Zhiwei Xiao, Dr. Cheunhoe Yow (sorted alphabetically by last name)
 
 ## Commands
 
