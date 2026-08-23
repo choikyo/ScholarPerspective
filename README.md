@@ -19,7 +19,7 @@ ScholarPerspective/
 ├── requirements.txt       # Python dependencies
 ├── articles/              # PDF articles organized by issue
 │   ├── articles.csv       # Article metadata (title, authors)
-│   └── Issue 1 - 2026-Feb/
+│   └── Issue 1 - 2026-April/
 │       └── *.pdf
 ├── static/
 │   ├── css/style.css      # Main stylesheet
