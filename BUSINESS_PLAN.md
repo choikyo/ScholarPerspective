@@ -82,7 +82,16 @@ Different systems, different requirements, roughly ordered from "easiest / autom
   - A publication ethics / plagiarism policy
   - An open-access license (e.g., Creative Commons) stated per article
   - A minimum number of published articles (historically ~5) before applying
+  - **A disclosed business model** — see 4b-i below, this is a required, separate disclosure
 - **Open question:** Is Scholar Perspective peer-reviewed, and if so, is that process written down anywhere? DOAJ will ask for specifics (blind/double-blind, number of reviewers, etc.)
+
+#### 4b-i. Business model disclosure — DOAJ requires this, distinct from your own budget planning
+Easy to conflate with Section 7's "budget/timeline appetite" question below, but they are different things:
+- **Your own spending** (CrossRef membership, trademark filing, legal entity costs) is internal — DOAJ never asks about it and it has no bearing on the application.
+- **What DOAJ *does* require you to disclose** is the journal's business model *toward authors*: does it charge Article Processing Charges (APCs) or any submission/publication fee? If so, how much, and is there a fee-waiver policy for authors who can't pay? What's the funding/support model (self-funded, institutional, no fees at all)?
+- This exists because "pay to publish with no oversight" is exactly the pattern predatory journals use, so DOAJ scrutinizes it closely as part of vetting legitimacy.
+- **If Scholar Perspective charges authors nothing** (fully free to submit and free to read), that's the simplest possible answer here and actually reflects *well* in DOAJ's review — no perceived conflict of interest.
+- **Open question:** Is there any current or future plan to charge authors a submission/publication fee? If never, this is one easy line in the DOAJ application. If yes, a waiver policy needs to be written before applying.
 
 **High-level flow to get listed:**
 
@@ -158,12 +167,13 @@ Standard channels work normally: Google Scholar, DOAJ, and direct site access ar
   - **VIP/CQVIP**
 - These typically involve their own partnership/submission processes, and content may need Chinese-language metadata or abstracts. This is a distinct future effort, not something a DOAJ listing unlocks automatically.
 
-**Open questions:**
-- Is mainland China reach a near-term goal, or a "someday" consideration? (Affects whether this is worth pursuing before or after DOAJ/CrossRef.)
-- Would Chinese-language abstracts or metadata be added per article if pursuing this track?
+**Resolved:** Not a near-term goal — a future ("someday") ambition, to be pursued after the ISSN/DOAJ/CrossRef path is established. The end goal is to make Scholar Perspective searchable through 论文网-style Chinese academic paper databases (the general term covering sites like CNKI, Wanfang Data, and VIP/CQVIP, plus Baidu Scholar for general search) — not necessarily one single platform, but that category of Chinese-language academic search infrastructure.
+
+**Open question:**
+- Would Chinese-language abstracts or metadata be added per article once this track is picked up? (Likely needed, since these platforms and their audiences primarily operate in Chinese.)
 
 **Action items:**
-- [ ] Treat China-specific database outreach (CNKI, Wanfang, Baidu Scholar) as a separate, later initiative — not a substitute for or dependency of the DOAJ/ISSN path
+- [ ] Treat 论文网-style database outreach (CNKI, Wanfang, VIP/CQVIP, Baidu Scholar) as a separate, later initiative — not a substitute for or dependency of the DOAJ/ISSN path; revisit once the journal has an established issue history
 - [ ] No action needed for India/Singapore beyond the discoverability work already planned for Google Scholar/DOAJ
 
 ---
@@ -228,10 +238,12 @@ This is its own document from the peer-review policy — DOAJ (and general good 
 1. Final, locked title wording (blocks ISSN application)
 2. Peer-review process — real, lightweight, or none for now (blocks DOAJ + credibility)
 3. Content license (CC BY? All rights reserved? blocks DOAJ + author expectations)
-4. Plagiarism-checking approach — manual, free tool, or paid tool (blocks the ethics policy from being fully concrete)
-5. Legal entity type (nonprofit vs. LLC vs. sole prop)
-6. Budget/timeline appetite for paid steps (CrossRef membership, trademark, legal entity filing)
-7. Whether mainland China discoverability (CNKI/Wanfang/Baidu Scholar) is a near-term or someday goal
+4. **Copy-protection vs. open license conflict** — the PDF viewer's copy-protection (right-click disabled, Ctrl/Cmd+C/A/X/S/P blocked) was built under an "All Rights Reserved" mindset. A CC license (BY, BY-NC, etc.) exists specifically to grant copying/reuse rights, and CC's own terms say the licensor shouldn't apply technological measures that restrict those rights — so the two can't fully coexist as currently built. **Suggestion:** if an open CC license is adopted for DOAJ purposes, relax the in-viewer copy-blocking (at minimum allow text selection/copy) rather than keep both; if keeping the copy-protection matters more, stay with "All Rights Reserved" and treat DOAJ as not achievable under the current design. A middle option is offering a clearly unrestricted "Download PDF" button alongside a still-protected in-browser view — closer to DOAJ's "immediate free full-text access" spirit, though not a perfectly clean resolution of the license clause.
+5. Plagiarism-checking approach — manual, free tool, or paid tool (blocks the ethics policy from being fully concrete)
+6. **Author-facing fee model — critical for DOAJ, must be disclosed in the application.** Does Scholar Perspective charge authors any submission/publication (APC) fee, now or ever? If no fees, ever — say so plainly in the application; this is the simplest answer and looks favorable. If fees are planned, a fee-waiver policy must be written first. (Not to be confused with item 8 below, which is your own internal spending — DOAJ never asks about that.)
+7. Legal entity type (nonprofit vs. LLC vs. sole prop)
+8. Budget/timeline appetite for your own paid steps (CrossRef membership, trademark, legal entity filing) — purely internal, not disclosed to or evaluated by DOAJ
+9. ~~Whether mainland China discoverability is a near-term or someday goal~~ — **Resolved:** someday/future goal, not near-term. Long-term aim is to be searchable through 论文网-style Chinese academic databases (CNKI, Wanfang, VIP/CQVIP, Baidu Scholar), pursued after ISSN/DOAJ/CrossRef are in place.
 
 ---
 
@@ -257,6 +269,7 @@ A single running list, pulled from every section above, so progress on "becoming
 - [ ] Decide the peer-review model (who reviews, conflict-of-interest rule for board-author submissions)
 - [ ] Decide the content license (e.g., CC BY, CC BY-NC, all rights reserved)
 - [ ] Decide the plagiarism-checking approach (manual / free tool / paid tool)
+- [ ] Decide the author-facing fee model (no fees vs. APC + waiver policy) — needed for DOAJ's business-model disclosure
 - [ ] Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines)
 - [ ] Set up the review log (spreadsheet) and start using it for Issue 2 submissions
 - [ ] Collect retroactive written review confirmations from Issue 1 reviewers
@@ -279,7 +292,7 @@ A single running list, pulled from every section above, so progress on "becoming
 - [ ] Decide on copyright registration approach (Copyright Office vs. relying on the stated license)
 - [ ] Pursue WorldCat/OCLC cataloging
 - [ ] Reach out to EBSCOhost / ProQuest / JSTOR once there's an established track record
-- [ ] If mainland China reach becomes a goal: pursue CNKI / Wanfang Data / Baidu Scholar partnerships (separate track from DOAJ/ISSN)
+- [ ] Long-term goal (not near-term): get searchable through 论文网-style Chinese academic databases — CNKI / Wanfang Data / VIP/CQVIP / Baidu Scholar — pursued after the DOAJ/ISSN path is established
 
 ---
 
@@ -291,21 +304,22 @@ Same items as Section 10, but flattened into a single suggested sequence rather 
 - [ ] 2. Decide the content license (e.g., CC BY, CC BY-NC, all rights reserved)
 - [ ] 3. Decide the peer-review model (who reviews, conflict-of-interest rule for board-author submissions)
 - [ ] 4. Decide the plagiarism-checking approach (manual / free tool / paid tool)
-- [ ] 5. Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines)
-- [ ] 6. Set up the review log (spreadsheet) and start using it for Issue 2 submissions
-- [ ] 7. Collect retroactive written review confirmations from Issue 1 reviewers
-- [ ] 8. Apply for the online ISSN (referencing Issue 1 as the published-issue evidence)
-- [ ] 9. Once granted, add the ISSN to site footer, PDF cover/masthead, and `articles.csv` metadata
-- [ ] 10. State the chosen license on every article page/PDF going forward
-- [ ] 11. Verify Google Scholar is actually indexing Issue 1 (`site:scholarperspective.com` search after a few weeks)
-- [ ] 12. Check whether the PDF.js viewer route exposes a crawlable PDF link for search engines
-- [ ] 13. Keep publishing until ~5 articles total are live
-- [ ] 14. Apply to DOAJ
-- [ ] 15. Apply to BASE / CORE
-- [ ] 16. Evaluate CrossRef DOI membership
-- [ ] 17. Decide legal entity type (nonprofit vs. LLC vs. sole proprietorship)
-- [ ] 18. Decide on trademark registration for "Scholar Perspective"
-- [ ] 19. Decide on copyright registration approach
-- [ ] 20. Pursue WorldCat/OCLC cataloging
-- [ ] 21. Reach out to EBSCOhost / ProQuest / JSTOR
-- [ ] 22. If mainland China reach becomes a goal: pursue CNKI / Wanfang Data / Baidu Scholar partnerships
+- [ ] 5. Decide the author-facing fee model (no fees vs. APC + waiver policy) — required DOAJ business-model disclosure
+- [ ] 6. Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines)
+- [ ] 7. Set up the review log (spreadsheet) and start using it for Issue 2 submissions
+- [ ] 8. Collect retroactive written review confirmations from Issue 1 reviewers
+- [ ] 9. Apply for the online ISSN (referencing Issue 1 as the published-issue evidence)
+- [ ] 10. Once granted, add the ISSN to site footer, PDF cover/masthead, and `articles.csv` metadata
+- [ ] 11. State the chosen license on every article page/PDF going forward
+- [ ] 12. Verify Google Scholar is actually indexing Issue 1 (`site:scholarperspective.com` search after a few weeks)
+- [ ] 13. Check whether the PDF.js viewer route exposes a crawlable PDF link for search engines
+- [ ] 14. Keep publishing until ~5 articles total are live
+- [ ] 15. Apply to DOAJ
+- [ ] 16. Apply to BASE / CORE
+- [ ] 17. Evaluate CrossRef DOI membership
+- [ ] 18. Decide legal entity type (nonprofit vs. LLC vs. sole proprietorship)
+- [ ] 19. Decide on trademark registration for "Scholar Perspective"
+- [ ] 20. Decide on copyright registration approach
+- [ ] 21. Pursue WorldCat/OCLC cataloging
+- [ ] 22. Reach out to EBSCOhost / ProQuest / JSTOR
+- [ ] 23. (Long-term, not near-term) Pursue 论文网-style Chinese database searchability — CNKI / Wanfang Data / VIP/CQVIP / Baidu Scholar
