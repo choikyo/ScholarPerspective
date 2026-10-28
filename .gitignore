@@ -26,3 +26,10 @@ instance/
 
 # Uploads (if you don't want to track uploaded files)
 # static/uploads/
+
+# Signed license forms — private (contain signatures). Never commit.
+licenses/**/*.pdf
+licenses/**/*.jpg
+licenses/**/*.jpeg
+licenses/**/*.png
+licenses/**/*.heic

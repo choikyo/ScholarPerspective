@@ -129,7 +129,7 @@ Easy to conflate with Section 7's "budget/timeline appetite" question below, but
 **Phase 5 — Ongoing**
 16. Periodic re-verification of metadata/policies to stay listed
 
-**Current gating items for Scholar Perspective:** #4 (peer review must be a real, described process) and #6 (need a stated license) — both policy decisions, not code changes.
+**Current gating items for Scholar Perspective:** #4 (peer review must be a real, described process) and #6 (license — **decided: CC BY-NC 4.0**, still needs author consent + stating on each article) — both policy decisions, not code changes.
 
 ### 4c. CrossRef (DOI registration — paid membership)
 - Assigns each article a permanent DOI (e.g., `10.xxxx/...`), the standard way papers get cited and linked across the web.
@@ -151,7 +151,8 @@ Easy to conflate with Section 7's "budget/timeline appetite" question below, but
 
 **Action items:**
 - [ ] Decide/document the peer-review process (even a lightweight one) — this single decision unlocks DOAJ, credibility, and is asked about everywhere
-- [ ] Decide the content license per article (e.g., CC BY-NC) and state it on each article page/PDF
+- [x] Decide the content license — **CC BY-NC 4.0** (decided 2026-10-27)
+- [ ] State CC BY-NC 4.0 on each article page/PDF (after author consent)
 - [ ] After issue #1 is public, verify Google Scholar can actually see the PDFs (search `site:scholarperspective.com` after a few weeks to check indexing)
 - [ ] Once ~5 articles are published and ISSN is granted, apply to DOAJ
 - [ ] Revisit CrossRef membership once there's a steady issue cadence
@@ -247,7 +248,7 @@ This is its own document from the peer-review policy — DOAJ (and general good 
 
 **Action items:**
 - [ ] Draft a short, reusable "license consent" sentence to include in future manuscript requests to professors (Issue 2 onward)
-- [ ] Retroactively contact Issue 1 authors individually to confirm (or decline) the chosen open license for their article
+- [ ] Retroactively contact Issue 1 authors individually to confirm (or decline) the chosen open license for their article — **In progress (2026-10-27):** the authors of all 5 Issue 1 articles agreed verbally to CC BY-NC 4.0 via the ops team; signed consent forms being collected. Check off once every signed form is on file — 7 signatures in total, since articles 1 and 5 each have two co-authors.
 - [ ] For any author who doesn't consent, mark that specific article "All Rights Reserved" instead of the open license — track this per-article, not journal-wide
 - [ ] Keep a simple record of each author's consent (an email reply is sufficient) alongside the peer-review log from Section 6b
 
@@ -266,8 +267,8 @@ This is its own document from the peer-review policy — DOAJ (and general good 
 
 1. ~~Final, locked title wording~~ — **Resolved (2026-10-27):** the title is exactly **"Scholar Perspective"** (singular, no subtitle). Translated names on the cover are decorative, not parallel titles.
 2. Peer-review process — real, lightweight, or none for now (blocks DOAJ + credibility)
-3. Content license (CC BY? All rights reserved? blocks DOAJ + author expectations)
-4. **Copy-protection vs. open license conflict** — the PDF viewer's copy-protection (right-click disabled, Ctrl/Cmd+C/A/X/S/P blocked) was built under an "All Rights Reserved" mindset. A CC license (BY, BY-NC, etc.) exists specifically to grant copying/reuse rights, and CC's own terms say the licensor shouldn't apply technological measures that restrict those rights — so the two can't fully coexist as currently built. **Suggestion:** if an open CC license is adopted for DOAJ purposes, relax the in-viewer copy-blocking (at minimum allow text selection/copy) rather than keep both; if keeping the copy-protection matters more, stay with "All Rights Reserved" and treat DOAJ as not achievable under the current design. A middle option is offering a clearly unrestricted "Download PDF" button alongside a still-protected in-browser view — closer to DOAJ's "immediate free full-text access" spirit, though not a perfectly clean resolution of the license clause.
+3. ~~Content license~~ — **Resolved (decided 2026-10-27):** **CC BY-NC 4.0** (free to read/share/adapt with credit, no commercial use). Qualifies for DOAJ; easy for professors to accept. Per-article exceptions ("All Rights Reserved") allowed if an author declines — see 6e.
+4. **Copy-protection vs. open license conflict** — **Resolved (decided 2026-10-27):** with CC BY-NC chosen, relax the viewer's copy-blocking (allow text selection/copy) and add a plain "Download PDF" button; keep in-browser reading. Original analysis: the PDF viewer's copy-protection (right-click disabled, Ctrl/Cmd+C/A/X/S/P blocked) was built under an "All Rights Reserved" mindset. A CC license (BY, BY-NC, etc.) exists specifically to grant copying/reuse rights, and CC's own terms say the licensor shouldn't apply technological measures that restrict those rights — so the two can't fully coexist as currently built. **Suggestion:** if an open CC license is adopted for DOAJ purposes, relax the in-viewer copy-blocking (at minimum allow text selection/copy) rather than keep both; if keeping the copy-protection matters more, stay with "All Rights Reserved" and treat DOAJ as not achievable under the current design. A middle option is offering a clearly unrestricted "Download PDF" button alongside a still-protected in-browser view — closer to DOAJ's "immediate free full-text access" spirit, though not a perfectly clean resolution of the license clause.
 5. Plagiarism-checking approach — manual, free tool, or paid tool (blocks the ethics policy from being fully concrete)
 6. **Author-facing fee model — critical for DOAJ, must be disclosed in the application.** Does Scholar Perspective charge authors any submission/publication (APC) fee, now or ever? If no fees, ever — say so plainly in the application; this is the simplest answer and looks favorable. If fees are planned, a fee-waiver policy must be written first. (Not to be confused with item 8 below, which is your own internal spending — DOAJ never asks about that.)
 7. Legal entity type (nonprofit vs. LLC vs. sole prop)
@@ -297,7 +298,8 @@ A single running list, pulled from every section above, so progress on "becoming
 **Now (before Issue 2 goes out):**
 - [x] Lock final title wording — **"Scholar Perspective"** (confirmed 2026-10-27)
 - [ ] Decide the peer-review model (who reviews, conflict-of-interest rule for board-author submissions)
-- [ ] Decide the content license (e.g., CC BY, CC BY-NC, all rights reserved)
+- [x] Decide the content license — **CC BY-NC 4.0** (decided 2026-10-27)
+- [ ] Update the PDF viewer: allow text selection/copy, add a "Download PDF" button (follows from the CC BY-NC decision)
 - [ ] Decide the plagiarism-checking approach (manual / free tool / paid tool)
 - [ ] Decide the author-facing fee model (no fees vs. APC + waiver policy) — needed for DOAJ's business-model disclosure
 - [ ] Owner review of `ETHICS_POLICY_DRAFT.md` (in progress) — finalize wording, fill in contact email placeholder
@@ -306,7 +308,7 @@ A single running list, pulled from every section above, so progress on "becoming
 - [ ] Set up the review log (spreadsheet) and start using it for Issue 2 submissions
 - [ ] Collect retroactive written review confirmations from Issue 1 reviewers
 - [ ] **Draft a "license consent" sentence for future manuscript requests** — since articles come from personally asking professors for their work, each one needs to actually agree to the open license before it can be stated on their article (copyright is theirs, not the journal's)
-- [ ] **Retroactively confirm license consent from Issue 1 authors** — contact each Issue 1 author to confirm (or decline) the chosen open license for their specific article; any who decline stay "All Rights Reserved" for that article only
+- [ ] **Retroactively confirm license consent from Issue 1 authors** — **In progress (2026-10-27):** the authors of all 5 Issue 1 articles agreed verbally to CC BY-NC 4.0 via the ops team; signed consent forms being collected. Check off once every signed form is on file — 7 signatures in total, since articles 1 and 5 each have two co-authors.
 
 **Near-term (around/after Issue 2):**
 - [ ] Apply for the online ISSN (referencing Issue 1 as the published-issue evidence)
@@ -337,7 +339,7 @@ A single running list, pulled from every section above, so progress on "becoming
 Same items as Section 10, but flattened into a single suggested sequence rather than grouped by timeframe — pick them off in order.
 
 - [x] 1. Lock the final title wording — **"Scholar Perspective"** (confirmed 2026-10-27)
-- [ ] 2. Decide the content license (e.g., CC BY, CC BY-NC, all rights reserved)
+- [x] 2. Decide the content license — **CC BY-NC 4.0** (decided 2026-10-27)
 - [ ] 3. Decide the peer-review model (who reviews, conflict-of-interest rule for board-author submissions)
 - [ ] 4. Decide the plagiarism-checking approach (manual / free tool / paid tool)
 - [ ] 5. Decide the author-facing fee model (no fees vs. APC + waiver policy) — required DOAJ business-model disclosure
@@ -347,7 +349,7 @@ Same items as Section 10, but flattened into a single suggested sequence rather 
 - [ ] 9. Set up the review log (spreadsheet) and start using it for Issue 2 submissions
 - [ ] 10. Collect retroactive written review confirmations from Issue 1 reviewers
 - [ ] 11. Draft a "license consent" sentence for future manuscript requests to professors (each author must agree to the open license — it's their copyright, not the journal's)
-- [ ] 12. Retroactively confirm license consent from each Issue 1 author (any who decline stay "All Rights Reserved" for that article only)
+- [ ] 12. Retroactively confirm license consent from each Issue 1 author — **In progress (2026-10-27):** the authors of all 5 Issue 1 articles agreed verbally to CC BY-NC 4.0 via the ops team; signed consent forms being collected. Check off once every signed form is on file — 7 signatures in total, since articles 1 and 5 each have two co-authors.
 - [ ] 13. Apply for the online ISSN (referencing Issue 1 as the published-issue evidence)
 - [ ] 14. Once granted, add the ISSN to site footer, PDF cover/masthead, and `articles.csv` metadata
 - [ ] 15. State the chosen license on every article page/PDF going forward
