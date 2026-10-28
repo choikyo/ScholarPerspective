@@ -36,7 +36,7 @@ These four things are interlinked: you generally need the ISSN and the editorial
 
 **Action items:**
 - [ ] Read current U.S. ISSN Center application requirements in full (they update wording periodically)
-- [ ] Decide the exact, final title wording before applying (title changes require a NEW ISSN, so lock this in first)
+- [x] Decide the exact, final title wording before applying — **"Scholar Perspective"** (confirmed 2026-10-27)
 - [ ] Apply for online ISSN once issue #1 is stable/public
 - [ ] Once granted, add ISSN to site footer, PDF cover/masthead, and `articles.csv`/metadata
 
@@ -72,6 +72,14 @@ Different systems, different requirements, roughly ordered from "easiest / autom
   - Site isn't blocked by `robots.txt` for the article pages
   - There's a clear, crawlable path to every article (sitemap.xml helps)
 - **Open question:** Does `/publications/view/<filepath>` (the PDF.js canvas viewer) expose a real, crawlable link to the underlying PDF, or does everything render client-side in a way Google can't see? Worth checking — this is a website/metadata concern to flag for later, not something to fix today.
+
+**Concrete steps to actually get found on Google/Google Scholar:**
+- [ ] Set up a free **Google Search Console** account (search.google.com/search-console), verify site ownership, and submit a sitemap — this actively tells Google where every article page is, instead of passively waiting for a crawl
+- [ ] Confirm article PDFs contain real, selectable text (not scanned images) — Google can't read text it can't select
+- [ ] Confirm the article pages/PDFs aren't blocked in `robots.txt`
+- [ ] Wait a few weeks after publishing, then check indexing by searching `site:scholarperspective.com` (and the exact article title in quotes) on both regular Google and Google Scholar
+- [ ] Optional accelerator: if any contributing professor is willing to link to their article from their own faculty/university page, that outside link helps Google discover and trust the page faster
+- Google Scholar itself has no "submit my article" button — it only discovers content by crawling, so the above steps (making the site easy to crawl) are the only real lever available
 
 ### 4b. DOAJ — Directory of Open Access Journals (free application, real vetting)
 - The most respected free index for open-access scholarly journals. (See Section 3 above for how this differs from ISSN.)
@@ -215,12 +223,33 @@ This is its own document from the peer-review policy — DOAJ (and general good 
 - Given the humanities/liberal-arts focus (vs. empirical human-subjects research), is IRB/ethical-approval language even relevant, or should the policy stay scoped to originality/authorship/plagiarism only?
 
 **Action items:**
+- [ ] Review the draft page content in `ETHICS_POLICY_DRAFT.md` (owner review in progress) — check wording, fill in the placeholder contact email, and finalize the plagiarism-screening sentence once a tool approach is picked
+- [ ] Deploy the finalized ethics/plagiarism policy as a live page on the site once review is complete
 - [ ] Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines, can be one combined page)
 - [ ] Decide on a plagiarism-checking approach (manual review vs. a free tool vs. a paid tool) and state it in the policy
 - [ ] State the journal's position on COPE core practices (adopt as a reference standard)
 - [ ] Set up the review log (spreadsheet) and start using it for Issue 2 submissions
 - [ ] Collect retroactive written review confirmations from Issue 1 reviewers
 - [ ] Decide and document the conflict-of-interest rule for board-member authors
+
+---
+
+## 6e. Author Consent for the Open License (important given how manuscripts are actually collected)
+
+**Context:** Articles are not collected through an open, formal submission system — they come from the owner personally requesting manuscripts from individual professors/scholars (private outreach). This matters for licensing specifically, because it changes who needs to agree to what.
+
+**Why this is a real gap, not just paperwork:** Copyright in each article belongs to the author (the professor) by default, not to Scholar Perspective. Choosing a license like CC BY is not something the journal can decide unilaterally — it means *the author* is agreeing to let the public freely copy, redistribute, and reuse their work (with credit). If a license like CC BY is stated on the site/PDF but the author never actually agreed to that, the journal would be making a legal claim about someone else's work that was never authorized.
+
+**What this means in practice:**
+- Going forward (Issue 2 onward), when personally requesting a manuscript from a professor, include a short, plain-language line confirming the license, e.g.: *"This journal is open access; once published, your article will be made freely available under a [CC BY / CC BY-NC] license, meaning readers may [redistribute / translate / reuse with credit]. Please confirm you agree to this."* A simple email reply of agreement is enough — no formal contract needed at this scale.
+- For Issue 1 (already published without this being discussed), the same retroactive approach used for peer-review evidence applies here: reach out to each Issue 1 author now with a short confirmation request, e.g.: *"We'd like to formally offer your published article under a [CC BY] open license going forward — please confirm you're comfortable with this."*
+- If a particular author declines the open license, that specific article can simply stay "All Rights Reserved" — the license does not have to be uniform across every article, as long as each one accurately reflects what its author actually agreed to.
+
+**Action items:**
+- [ ] Draft a short, reusable "license consent" sentence to include in future manuscript requests to professors (Issue 2 onward)
+- [ ] Retroactively contact Issue 1 authors individually to confirm (or decline) the chosen open license for their article
+- [ ] For any author who doesn't consent, mark that specific article "All Rights Reserved" instead of the open license — track this per-article, not journal-wide
+- [ ] Keep a simple record of each author's consent (an email reply is sufficient) alongside the peer-review log from Section 6b
 
 ---
 
@@ -235,7 +264,7 @@ This is its own document from the peer-review policy — DOAJ (and general good 
 
 ## 8. Open Decisions Summary (things only the owner can decide)
 
-1. Final, locked title wording (blocks ISSN application)
+1. ~~Final, locked title wording~~ — **Resolved (2026-10-27):** the title is exactly **"Scholar Perspective"** (singular, no subtitle). Translated names on the cover are decorative, not parallel titles.
 2. Peer-review process — real, lightweight, or none for now (blocks DOAJ + credibility)
 3. Content license (CC BY? All rights reserved? blocks DOAJ + author expectations)
 4. **Copy-protection vs. open license conflict** — the PDF viewer's copy-protection (right-click disabled, Ctrl/Cmd+C/A/X/S/P blocked) was built under an "All Rights Reserved" mindset. A CC license (BY, BY-NC, etc.) exists specifically to grant copying/reuse rights, and CC's own terms say the licensor shouldn't apply technological measures that restrict those rights — so the two can't fully coexist as currently built. **Suggestion:** if an open CC license is adopted for DOAJ purposes, relax the in-viewer copy-blocking (at minimum allow text selection/copy) rather than keep both; if keeping the copy-protection matters more, stay with "All Rights Reserved" and treat DOAJ as not achievable under the current design. A middle option is offering a clearly unrestricted "Download PDF" button alongside a still-protected in-browser view — closer to DOAJ's "immediate free full-text access" spirit, though not a perfectly clean resolution of the license clause.
@@ -244,6 +273,7 @@ This is its own document from the peer-review policy — DOAJ (and general good 
 7. Legal entity type (nonprofit vs. LLC vs. sole prop)
 8. Budget/timeline appetite for your own paid steps (CrossRef membership, trademark, legal entity filing) — purely internal, not disclosed to or evaluated by DOAJ
 9. ~~Whether mainland China discoverability is a near-term or someday goal~~ — **Resolved:** someday/future goal, not near-term. Long-term aim is to be searchable through 论文网-style Chinese academic databases (CNKI, Wanfang, VIP/CQVIP, Baidu Scholar), pursued after ISSN/DOAJ/CrossRef are in place.
+10. **Author consent for the open license** — since manuscripts come from personal requests to professors rather than a formal submission system, each author needs to actually agree to the chosen open license before it's stated on their article (see Section 6e). This isn't optional paperwork — copyright belongs to the author by default, so the journal can't unilaterally declare an open license on their behalf.
 
 ---
 
@@ -265,19 +295,25 @@ This is its own document from the peer-review policy — DOAJ (and general good 
 A single running list, pulled from every section above, so progress on "becoming a recognized journal" can be tracked in one place. Check items off as they're done; add new ones as new questions come up.
 
 **Now (before Issue 2 goes out):**
-- [ ] Lock final title wording, exactly as it will appear everywhere
+- [x] Lock final title wording — **"Scholar Perspective"** (confirmed 2026-10-27)
 - [ ] Decide the peer-review model (who reviews, conflict-of-interest rule for board-author submissions)
 - [ ] Decide the content license (e.g., CC BY, CC BY-NC, all rights reserved)
 - [ ] Decide the plagiarism-checking approach (manual / free tool / paid tool)
 - [ ] Decide the author-facing fee model (no fees vs. APC + waiver policy) — needed for DOAJ's business-model disclosure
+- [ ] Owner review of `ETHICS_POLICY_DRAFT.md` (in progress) — finalize wording, fill in contact email placeholder
+- [ ] Deploy the finalized ethics/plagiarism policy page to the live site
 - [ ] Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines)
 - [ ] Set up the review log (spreadsheet) and start using it for Issue 2 submissions
 - [ ] Collect retroactive written review confirmations from Issue 1 reviewers
+- [ ] **Draft a "license consent" sentence for future manuscript requests** — since articles come from personally asking professors for their work, each one needs to actually agree to the open license before it can be stated on their article (copyright is theirs, not the journal's)
+- [ ] **Retroactively confirm license consent from Issue 1 authors** — contact each Issue 1 author to confirm (or decline) the chosen open license for their specific article; any who decline stay "All Rights Reserved" for that article only
 
 **Near-term (around/after Issue 2):**
 - [ ] Apply for the online ISSN (referencing Issue 1 as the published-issue evidence)
 - [ ] Once granted, add the ISSN to site footer, PDF cover/masthead, and `articles.csv` metadata
 - [ ] State the chosen license on every article page/PDF going forward
+- [ ] **Set up Google Search Console and submit a sitemap** — actively tells Google where article pages are, rather than waiting passively for a crawl
+- [ ] Confirm PDFs have real selectable text (not scanned images) so Google/Scholar can actually read them
 - [ ] Verify Google Scholar is actually indexing Issue 1 (`site:scholarperspective.com` search after a few weeks)
 - [ ] Check whether the PDF.js viewer route exposes a crawlable PDF link for search engines (flag for the website side of things)
 
@@ -300,26 +336,32 @@ A single running list, pulled from every section above, so progress on "becoming
 
 Same items as Section 10, but flattened into a single suggested sequence rather than grouped by timeframe — pick them off in order.
 
-- [ ] 1. Lock the final title wording, exactly as it will appear everywhere
+- [x] 1. Lock the final title wording — **"Scholar Perspective"** (confirmed 2026-10-27)
 - [ ] 2. Decide the content license (e.g., CC BY, CC BY-NC, all rights reserved)
 - [ ] 3. Decide the peer-review model (who reviews, conflict-of-interest rule for board-author submissions)
 - [ ] 4. Decide the plagiarism-checking approach (manual / free tool / paid tool)
 - [ ] 5. Decide the author-facing fee model (no fees vs. APC + waiver policy) — required DOAJ business-model disclosure
-- [ ] 6. Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines)
-- [ ] 7. Set up the review log (spreadsheet) and start using it for Issue 2 submissions
-- [ ] 8. Collect retroactive written review confirmations from Issue 1 reviewers
-- [ ] 9. Apply for the online ISSN (referencing Issue 1 as the published-issue evidence)
-- [ ] 10. Once granted, add the ISSN to site footer, PDF cover/masthead, and `articles.csv` metadata
-- [ ] 11. State the chosen license on every article page/PDF going forward
-- [ ] 12. Verify Google Scholar is actually indexing Issue 1 (`site:scholarperspective.com` search after a few weeks)
-- [ ] 13. Check whether the PDF.js viewer route exposes a crawlable PDF link for search engines
-- [ ] 14. Keep publishing until ~5 articles total are live
-- [ ] 15. Apply to DOAJ
-- [ ] 16. Apply to BASE / CORE
-- [ ] 17. Evaluate CrossRef DOI membership
-- [ ] 18. Decide legal entity type (nonprofit vs. LLC vs. sole proprietorship)
-- [ ] 19. Decide on trademark registration for "Scholar Perspective"
-- [ ] 20. Decide on copyright registration approach
-- [ ] 21. Pursue WorldCat/OCLC cataloging
-- [ ] 22. Reach out to EBSCOhost / ProQuest / JSTOR
-- [ ] 23. (Long-term, not near-term) Pursue 论文网-style Chinese database searchability — CNKI / Wanfang Data / VIP/CQVIP / Baidu Scholar
+- [ ] 6. Owner review of `ETHICS_POLICY_DRAFT.md` (in progress) — finalize wording, fill in contact email placeholder
+- [ ] 7. Deploy the finalized ethics/plagiarism policy page to the live site
+- [ ] 8. Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines)
+- [ ] 9. Set up the review log (spreadsheet) and start using it for Issue 2 submissions
+- [ ] 10. Collect retroactive written review confirmations from Issue 1 reviewers
+- [ ] 11. Draft a "license consent" sentence for future manuscript requests to professors (each author must agree to the open license — it's their copyright, not the journal's)
+- [ ] 12. Retroactively confirm license consent from each Issue 1 author (any who decline stay "All Rights Reserved" for that article only)
+- [ ] 13. Apply for the online ISSN (referencing Issue 1 as the published-issue evidence)
+- [ ] 14. Once granted, add the ISSN to site footer, PDF cover/masthead, and `articles.csv` metadata
+- [ ] 15. State the chosen license on every article page/PDF going forward
+- [ ] 16. Set up Google Search Console and submit a sitemap (actively signals Google where article pages are)
+- [ ] 17. Confirm PDFs have real selectable text (not scanned images) so crawlers can read them
+- [ ] 18. Verify Google Scholar is actually indexing Issue 1 (`site:scholarperspective.com` search after a few weeks)
+- [ ] 19. Check whether the PDF.js viewer route exposes a crawlable PDF link for search engines
+- [ ] 20. Keep publishing until ~5 articles total are live
+- [ ] 21. Apply to DOAJ
+- [ ] 22. Apply to BASE / CORE
+- [ ] 23. Evaluate CrossRef DOI membership
+- [ ] 24. Decide legal entity type (nonprofit vs. LLC vs. sole proprietorship)
+- [ ] 25. Decide on trademark registration for "Scholar Perspective"
+- [ ] 26. Decide on copyright registration approach
+- [ ] 27. Pursue WorldCat/OCLC cataloging
+- [ ] 28. Reach out to EBSCOhost / ProQuest / JSTOR
+- [ ] 29. (Long-term, not near-term) Pursue 论文网-style Chinese database searchability — CNKI / Wanfang Data / VIP/CQVIP / Baidu Scholar

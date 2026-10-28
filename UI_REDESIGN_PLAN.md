@@ -1,5 +1,5 @@
 # UI Redesign Action Plan
-## ScholarPerspective - Professional Academic Journal Interface
+## Scholar Perspective - Professional Academic Journal Interface
 
 ---
 
@@ -60,7 +60,7 @@ Border:            #e1e4ed  (cool light gray)
 ```html
 <nav>
     <div class="logo">
-        <img src="..." alt="ScholarPerspective">
+        <img src="..." alt="Scholar Perspective">
         Scholar Perspective
     </div>
     <ul>
