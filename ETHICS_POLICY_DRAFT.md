@@ -16,7 +16,7 @@ All submissions must represent the author's own original work. Manuscripts that 
 
 **Plagiarism**
 
-Plagiarism in any form — including the unattributed use of another author's words, ideas, or data — is not tolerated. All submissions are reviewed for originality prior to acceptance. Manuscripts found to contain plagiarized content will be rejected, and any concerns identified after publication will be investigated and may result in a correction or retraction.
+Plagiarism in any form — including the unattributed use of another author's words, ideas, or data — is not tolerated. All submissions are checked for originality prior to acceptance, using plagiarism-detection software together with review by a member of our Advisory Board. Manuscripts found to contain plagiarized content will be rejected, and any concerns identified after publication will be investigated and may result in a correction or retraction.
 
 **Authorship**
 
@@ -43,5 +43,5 @@ Questions or concerns about publication ethics can be directed to [contact info 
 ## Notes for Later
 
 - Placeholder left for a contact email/method for reporting concerns — fill in before publishing.
-- Wording is intentionally general on *how* plagiarism is screened (doesn't commit to a specific tool), since the plagiarism-checking approach (manual vs. free vs. paid tool) is still an open decision in `BUSINESS_PLAN.md` Section 8. Once that's decided, consider adding a sentence naming the method, e.g. "Submissions are checked for originality using [tool name] and editorial review."
+- Plagiarism method decided 2026-10-27: free online checker (e.g., Quetext) + reviewer judgment. The page says "plagiarism-detection software" without naming the tool, so it stays accurate if the tool changes (e.g., upgrading to Crossref Similarity Check later).
 - This can be combined with the peer-review policy statement and author guidelines into one "Editorial Policies" page, or kept as its own standalone page — either works for DOAJ's purposes.

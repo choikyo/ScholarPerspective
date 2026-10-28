@@ -99,6 +99,7 @@ Easy to conflate with Section 7's "budget/timeline appetite" question below, but
 - **What DOAJ *does* require you to disclose** is the journal's business model *toward authors*: does it charge Article Processing Charges (APCs) or any submission/publication fee? If so, how much, and is there a fee-waiver policy for authors who can't pay? What's the funding/support model (self-funded, institutional, no fees at all)?
 - This exists because "pay to publish with no oversight" is exactly the pattern predatory journals use, so DOAJ scrutinizes it closely as part of vetting legitimacy.
 - **If Scholar Perspective charges authors nothing** (fully free to submit and free to read), that's the simplest possible answer here and actually reflects *well* in DOAJ's review — no perceived conflict of interest.
+- **Current position (2026-10-27):** no fees charged today; not publicly stated yet — will be revisited after more issues, before applying to DOAJ.
 - **Open question:** Is there any current or future plan to charge authors a submission/publication fee? If never, this is one easy line in the DOAJ application. If yes, a waiver policy needs to be written before applying.
 
 **High-level flow to get listed:**
@@ -129,7 +130,7 @@ Easy to conflate with Section 7's "budget/timeline appetite" question below, but
 **Phase 5 — Ongoing**
 16. Periodic re-verification of metadata/policies to stay listed
 
-**Current gating items for Scholar Perspective:** #4 (peer review must be a real, described process) and #6 (license — **decided: CC BY-NC 4.0**, still needs author consent + stating on each article) — both policy decisions, not code changes.
+**Current gating items for Scholar Perspective:** #4 (peer review — **model decided**, still needs publishing on the site) and #6 (license — **decided: CC BY-NC 4.0**, still needs author consent + stating on each article) — both policy decisions, not code changes.
 
 ### 4c. CrossRef (DOI registration — paid membership)
 - Assigns each article a permanent DOI (e.g., `10.xxxx/...`), the standard way papers get cited and linked across the web.
@@ -227,11 +228,11 @@ This is its own document from the peer-review policy — DOAJ (and general good 
 - [ ] Review the draft page content in `ETHICS_POLICY_DRAFT.md` (owner review in progress) — check wording, fill in the placeholder contact email, and finalize the plagiarism-screening sentence once a tool approach is picked
 - [ ] Deploy the finalized ethics/plagiarism policy as a live page on the site once review is complete
 - [ ] Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines, can be one combined page)
-- [ ] Decide on a plagiarism-checking approach (manual review vs. a free tool vs. a paid tool) and state it in the policy
+- [x] Decide on a plagiarism-checking approach — **free online checker (e.g., Quetext) + reviewer judgment**; upgrade to Crossref Similarity Check (iThenticate) after joining Crossref (decided 2026-10-27); stated in `ETHICS_POLICY_DRAFT.md`
 - [ ] State the journal's position on COPE core practices (adopt as a reference standard)
 - [ ] Set up the review log (spreadsheet) and start using it for Issue 2 submissions
 - [ ] Collect retroactive written review confirmations from Issue 1 reviewers
-- [ ] Decide and document the conflict-of-interest rule for board-member authors
+- [x] Decide the conflict-of-interest rule for board-member authors — reviewed by an uninvolved board member; the author takes no part in the decision (decided 2026-10-27)
 
 ---
 
@@ -266,10 +267,10 @@ This is its own document from the peer-review policy — DOAJ (and general good 
 ## 8. Open Decisions Summary (things only the owner can decide)
 
 1. ~~Final, locked title wording~~ — **Resolved (2026-10-27):** the title is exactly **"Scholar Perspective"** (singular, no subtitle). Translated names on the cover are decorative, not parallel titles.
-2. Peer-review process — real, lightweight, or none for now (blocks DOAJ + credibility)
+2. ~~Peer-review process~~ — **Resolved (decided 2026-10-27):** **single-blind review by at least one Advisory Board member; board-member authors reviewed by an uninvolved board member; editor-in-chief makes the final decision**. Still to do: publish it on the Editorial Policies page and name the editor-in-chief.
 3. ~~Content license~~ — **Resolved (decided 2026-10-27):** **CC BY-NC 4.0** (free to read/share/adapt with credit, no commercial use). Qualifies for DOAJ; easy for professors to accept. Per-article exceptions ("All Rights Reserved") allowed if an author declines — see 6e.
 4. **Copy-protection vs. open license conflict** — **Resolved (decided 2026-10-27):** with CC BY-NC chosen, relax the viewer's copy-blocking (allow text selection/copy) and add a plain "Download PDF" button; keep in-browser reading. Original analysis: the PDF viewer's copy-protection (right-click disabled, Ctrl/Cmd+C/A/X/S/P blocked) was built under an "All Rights Reserved" mindset. A CC license (BY, BY-NC, etc.) exists specifically to grant copying/reuse rights, and CC's own terms say the licensor shouldn't apply technological measures that restrict those rights — so the two can't fully coexist as currently built. **Suggestion:** if an open CC license is adopted for DOAJ purposes, relax the in-viewer copy-blocking (at minimum allow text selection/copy) rather than keep both; if keeping the copy-protection matters more, stay with "All Rights Reserved" and treat DOAJ as not achievable under the current design. A middle option is offering a clearly unrestricted "Download PDF" button alongside a still-protected in-browser view — closer to DOAJ's "immediate free full-text access" spirit, though not a perfectly clean resolution of the license clause.
-5. Plagiarism-checking approach — manual, free tool, or paid tool (blocks the ethics policy from being fully concrete)
+5. ~~Plagiarism-checking approach~~ — **Resolved (decided 2026-10-27):** **free online checker (e.g., Quetext) + reviewer judgment**; upgrade to Crossref Similarity Check (iThenticate) after joining Crossref.
 6. **Author-facing fee model — critical for DOAJ, must be disclosed in the application.** Does Scholar Perspective charge authors any submission/publication (APC) fee, now or ever? If no fees, ever — say so plainly in the application; this is the simplest answer and looks favorable. If fees are planned, a fee-waiver policy must be written first. (Not to be confused with item 8 below, which is your own internal spending — DOAJ never asks about that.)
 7. Legal entity type (nonprofit vs. LLC vs. sole prop)
 8. Budget/timeline appetite for your own paid steps (CrossRef membership, trademark, legal entity filing) — purely internal, not disclosed to or evaluated by DOAJ
@@ -297,11 +298,11 @@ A single running list, pulled from every section above, so progress on "becoming
 
 **Now (before Issue 2 goes out):**
 - [x] Lock final title wording — **"Scholar Perspective"** (confirmed 2026-10-27)
-- [ ] Decide the peer-review model (who reviews, conflict-of-interest rule for board-author submissions)
+- [x] Decide the peer-review model — **single-blind review by at least one Advisory Board member; board-member authors reviewed by an uninvolved board member; editor-in-chief makes the final decision** (decided 2026-10-27)
 - [x] Decide the content license — **CC BY-NC 4.0** (decided 2026-10-27)
 - [ ] Update the PDF viewer: allow text selection/copy, add a "Download PDF" button (follows from the CC BY-NC decision)
-- [ ] Decide the plagiarism-checking approach (manual / free tool / paid tool)
-- [ ] Decide the author-facing fee model (no fees vs. APC + waiver policy) — needed for DOAJ's business-model disclosure
+- [x] Decide the plagiarism-checking approach — **free online checker (e.g., Quetext) + reviewer judgment**; upgrade to Crossref Similarity Check (iThenticate) after joining Crossref (decided 2026-10-27)
+- [ ] Decide the author-facing fee model (no fees vs. APC + waiver policy) — needed for DOAJ's business-model disclosure — **Current position (2026-10-27):** no fees are charged today, but the journal is not ready to commit publicly to a fee policy; leave fees off the site for now and revisit after more issues. Must be decided and stated before the DOAJ application.
 - [ ] Owner review of `ETHICS_POLICY_DRAFT.md` (in progress) — finalize wording, fill in contact email placeholder
 - [ ] Deploy the finalized ethics/plagiarism policy page to the live site
 - [ ] Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines)
@@ -340,12 +341,12 @@ Same items as Section 10, but flattened into a single suggested sequence rather 
 
 - [x] 1. Lock the final title wording — **"Scholar Perspective"** (confirmed 2026-10-27)
 - [x] 2. Decide the content license — **CC BY-NC 4.0** (decided 2026-10-27)
-- [ ] 3. Decide the peer-review model (who reviews, conflict-of-interest rule for board-author submissions)
-- [ ] 4. Decide the plagiarism-checking approach (manual / free tool / paid tool)
-- [ ] 5. Decide the author-facing fee model (no fees vs. APC + waiver policy) — required DOAJ business-model disclosure
-- [ ] 6. Owner review of `ETHICS_POLICY_DRAFT.md` (in progress) — finalize wording, fill in contact email placeholder
+- [x] 3. Decide the peer-review model — **single-blind review by at least one Advisory Board member; board-member authors reviewed by an uninvolved board member; editor-in-chief makes the final decision** (decided 2026-10-27)
+- [x] 4. Decide the plagiarism-checking approach — **free online checker (e.g., Quetext) + reviewer judgment**; upgrade to Crossref Similarity Check (iThenticate) after joining Crossref (decided 2026-10-27)
+- [ ] 5. Decide the author-facing fee model (no fees vs. APC + waiver policy) — required DOAJ business-model disclosure — **Current position (2026-10-27):** no fees are charged today, but the journal is not ready to commit publicly to a fee policy; leave fees off the site for now and revisit after more issues. Must be decided and stated before the DOAJ application.
+- [ ] 6. Owner review of `ETHICS_POLICY_DRAFT.md` (in progress) — finalize wording, fill in contact email placeholder — **Status (2026-10-27):** shared with the boss earlier, awaiting their finalization. Note: the plagiarism sentence was updated after sharing (now names software + board reviewer).
 - [ ] 7. Deploy the finalized ethics/plagiarism policy page to the live site
-- [ ] 8. Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines)
+- [ ] 8. Draft and publish an Editorial Policies page (peer review + ethics/plagiarism policy + author guidelines) — **Drafted (2026-10-27):** `EDITORIAL_POLICIES_DRAFT.md`, going to the board and editor-in-chief for review
 - [ ] 9. Set up the review log (spreadsheet) and start using it for Issue 2 submissions
 - [ ] 10. Collect retroactive written review confirmations from Issue 1 reviewers
 - [ ] 11. Draft a "license consent" sentence for future manuscript requests to professors (each author must agree to the open license — it's their copyright, not the journal's)
