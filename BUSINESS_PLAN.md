@@ -27,7 +27,7 @@ These four things are interlinked: you generally need the ISSN and the editorial
 - Typical requirements:
   - Title of the publication (must be exact wording as it appears in issues) — this is the journal's own title (e.g., "Scholar Perspective"), not article titles. Tied permanently to that exact string; a future title change needs a *new* ISSN.
   - Confirmation it publishes on an ongoing/serial basis (not a one-off) — satisfied just by being structured as a numbered, continuing series rather than a standalone publication.
-  - At least one published issue, sometimes evidence of intent to continue — already satisfied (Issue 1 live, Issue 2 in progress).
+  - At least one published issue, sometimes evidence of intent to continue — already satisfied (Issue 1 and Issue 2 both live as of 2026-11-15).
   - Publisher name/contact info — administrative only, for LOC's own records; doesn't require a registered business entity.
   - URL where issues are accessible — just the live publications URL, so they can confirm it's real and public.
 - Processing time: historically a few weeks to a few months
@@ -358,7 +358,7 @@ Same items as Section 10, but flattened into a single suggested sequence rather 
 - [ ] 17. Confirm PDFs have real selectable text (not scanned images) so crawlers can read them
 - [ ] 18. Verify Google Scholar is actually indexing Issue 1 (`site:scholarperspective.com` search after a few weeks)
 - [ ] 19. Check whether the PDF.js viewer route exposes a crawlable PDF link for search engines
-- [ ] 20. Keep publishing until ~5 articles total are live
+- [x] 20. Keep publishing until ~5 articles total are live — **6 articles live (2026-11-15):** 5 in Issue 1, 1 in Issue 2
 - [ ] 21. Apply to DOAJ
 - [ ] 22. Apply to BASE / CORE
 - [ ] 23. Evaluate CrossRef DOI membership

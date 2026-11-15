@@ -19,8 +19,11 @@ ScholarPerspective/
 ├── requirements.txt       # Python dependencies
 ├── articles/              # PDF articles organized by issue
 │   ├── articles.csv       # Article metadata (title, authors)
-│   └── Issue 1 - 2026-April/
+│   ├── Issue 1 - 2026-April/
+│   │   └── *.pdf
+│   └── Issue 2 - 2026-October/
 │       └── *.pdf
+├── licenses/              # Author license consent log (signed forms git-ignored)
 ├── static/
 │   ├── css/style.css      # Main stylesheet
 │   ├── js/main.js         # JavaScript (search functionality)
@@ -83,8 +86,7 @@ Visit `http://127.0.0.1:5000`
 
 ## Domain
 
-- Production: www.scholarperspective.com (to be configured)
-- Current: [username].pythonanywhere.com
+- Production: www.scholarperspective.com
 
 ## License
 
